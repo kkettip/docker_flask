@@ -74,5 +74,6 @@ To remove volumes: docker-compose down -v
 To delete all: docker-compose down -v --rmi all --remove-orphans
 
 ## Observations and Reflections:   
-Docker Compose differs from using Docker alone because Docker compose allows mulitiple apps in containers to be run simultaneously. While Docker alone allows for one app to be run at a time. 
+Docker Compose differs from using Docker alone because Docker compose allows mulitiple apps in containers to be run simultaneously. While Docker alone allows for one app to be run at a time. With Docker compose the image does not have to be rebuild everytime changes are made because `docker-compose.yaml` file has the code `volumes` that allows for the detection and update of changes.  Docker alone does not contain the `docker-compose.yaml` file and the image have to be rebuild everytime changes are made.
+
 No challenges or errors occurred when setting up the containers. 
