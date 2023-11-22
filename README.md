@@ -38,7 +38,7 @@ To delete all containers: docker system prune -a -f
 ## Part Two: Multi-Container Setup with Docker Compose
 Steps for Multi-Container Setup with Docker Compose
 1. create 2 different folders with each containing a flask app, requirements/txt and Dockerfile
-2. create docker-compose.yaml file that contains version, services, app name, build, ports and volumes. The following is an example:
+2. create docker-compose.yaml file that contains `version`, `services`, `app name`, `build`, `ports` and `volumes`. The following is an example:
 
           `version: '3'`
             `services:`
@@ -74,6 +74,6 @@ To remove volumes: docker-compose down -v
 To delete all: docker-compose down -v --rmi all --remove-orphans
 
 ## Observations and Reflections:   
-Docker Compose differs from using Docker alone because Docker compose allows mulitiple apps in containers to be run simultaneously. While Docker alone allows for one app to be run at a time. With Docker compose the image does not have to be rebuild everytime changes are made because `docker-compose.yaml` file has the code `volumes` that allows for the detection and update of changes.  Docker alone does not contain the `docker-compose.yaml` file and the image have to be rebuild everytime changes are made.
+Docker Compose differs from using Docker alone because Docker compose allows mulitiple apps in multiple containers to be run simultaneously. While Docker alone allows for one app to be run at a time. With Docker compose the image does not have to be rebuild everytime changes are made because `docker-compose.yaml` file has the code `volumes` that allows for the detection and update of changes.  Docker alone does not contain the `docker-compose.yaml` file and the image have to be rebuild everytime changes are made.
 
 No challenges or errors occurred when setting up the containers. 
