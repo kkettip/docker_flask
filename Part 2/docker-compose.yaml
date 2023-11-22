@@ -1,6 +1,6 @@
-version: '3'
+version: '3' 
 services:
-  flask_app_1:
+  flask_app_1: #name of container
     build: ./flask1
     ports:
       - "5001:5000"
@@ -15,5 +15,19 @@ services:
 
 
 
-
+#Docker compose is for running multiple apps and containers simultaneously
     
+# services: include the containers 
+# build: specifies the folder to the app that will be built
+# ports: specified expose ports (<host-port>:<container-port>)
+# volumes: allow changes to be detected and then pushes those changes
+
+
+#Docker Compose Commands
+# To build images: docker-compose build
+# To run containers: docker-compose up -d
+# To stop containers: docker-compose down
+# To list containers: docker-compose ps
+# To remove containers: docker-compose rm
+# To remove volumes: docker-compose down -v
+# To delete all: docker-compose down -v --rmi all --remove-orphans
