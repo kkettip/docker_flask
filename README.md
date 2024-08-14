@@ -1,4 +1,4 @@
-# docker_flask_homework
+# docker_flask
 
 ## Part One: Dockerizing a Single Flask Application
 Steps to Dockerize the Flask application
